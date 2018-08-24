@@ -1,0 +1,11 @@
+feature_cols:
+  - preg
+  - plas
+  - pres
+  - skin
+  - test
+  - mass
+  - pedi
+  - age
+response_col:
+  - class
