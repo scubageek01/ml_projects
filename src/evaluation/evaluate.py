@@ -8,10 +8,10 @@ from data.preprocess import read_processed_data
 
 
 @click.command()
-@click.option('--model')
-@click.option('--scoring')
-@click.option('--features')
-@click.option('--response')
+@click.option('--model', help='The model to be evaluated')
+@click.option('--scoring', help='Scoring metrics i.e. accuracy, neg_log_loss, precision, etc..')
+@click.option('--features', help='The feature matrix')
+@click.option('--response', help='The response vector')
 @click.argument('output_file', type=click.Path(writable=True, dir_okay=False))
 def main(model, scoring, features, response, output_file):
     model = read_processed_data(model)

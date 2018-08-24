@@ -8,7 +8,8 @@ import pickle
 
 @click.command()
 @click.argument('output_file', type=click.Path(writable=True, dir_okay=False))
-@click.option('--scaler', default='standardized', help='standard -> StandardScaler, minmax -> MinMaxScaler')
+@click.option('--scaler', default='standardized', help='standard -> StandardScaler, minmax -> MinMaxScaler',
+              help='')
 def main(output_file, scaler='standardized'):
     estimators = []
     if scaler == 'standardized':
