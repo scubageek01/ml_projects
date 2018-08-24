@@ -4,11 +4,6 @@ import numpy as np
 import yaml
 import os
 
-from sklearn.preprocessing import MinMaxScaler
-from sklearn.preprocessing import StandardScaler
-from sklearn.preprocessing import Normalizer
-from sklearn.preprocessing import Binarizer
-
 PROJ_ROOT = os.path.abspath(os.path.join(os.pardir))
 PARAMS = 'src/data/params.yml'
 
@@ -20,8 +15,8 @@ def read_config(filename):
 
 
 def get_dataset_attributes():
-    feature_cols = read_config('src/data/params.yml')['feature_cols']
-    response_col = read_config('src/data/params.yml')['response_col']
+    feature_cols = read_config(PARAMS)['feature_cols']
+    response_col = read_config(PARAMS)['response_col']
     colnames = feature_cols + response_col
     feature_size = len(feature_cols)
     return colnames, feature_cols, response_col, feature_size
@@ -44,28 +39,14 @@ def read_processed_data(filename):
     return dataframe
 
 
-def rescale_data(dataframe):
-    scaler = MinMaxScaler(feature_range=(0, 1))
-    dataframe = scaler.fit_transform(dataframe)
-    return dataframe
+def get_features(dataframe):
+    colnames, feature_cols, response_col, feature_size = get_dataset_attributes()
+    return dataframe[feature_cols]
 
 
-def standardize_data(dataframe):
-    scaler = StandardScaler()
-    dataframe = scaler.fit_transform(dataframe)
-    return dataframe
-
-
-def normalize_data(dataframe):
-    scaler = Normalizer()
-    dataframe = scaler.fit_transform(dataframe)
-    return dataframe
-
-
-def binarize_data(dataframe):
-    scaler = Binarizer()
-    dataframe = scaler.fit_transform(dataframe)
-    return dataframe
+def get_response(dataframe):
+    colnames, feature_cols, response_col, feature_size = get_dataset_attributes()
+    return dataframe[response_col]
 
 
 @click.command()
@@ -81,8 +62,10 @@ def main(input_file, output_file, features, response):
     colnames, feature_cols, response_col, feature_size = get_dataset_attributes()
     dataframe.columns = colnames
     dataframe.to_pickle(output_file)
-    features_matrix = dataframe[feature_cols]
-    response_vector = dataframe[response_col]
+
+    features_matrix = get_features(dataframe)
+    response_vector = get_response(dataframe)
+
     features_matrix.to_pickle(features)
     response_vector.to_pickle(response)
 
