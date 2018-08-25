@@ -3,14 +3,13 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.pipeline import Pipeline
 from sklearn.linear_model import LogisticRegression
-import pickle
+from sklearn.externals import joblib
 
 
 @click.command()
 @click.argument('output_file', type=click.Path(writable=True, dir_okay=False))
-@click.option('--scaler', default='standardized', help='standard -> StandardScaler, minmax -> MinMaxScaler',
-              help='')
-def main(output_file, scaler='standardized'):
+@click.option('--scaler', default='standardized', help='standardized -> StandardScaler, minmax -> MinMaxScaler')
+def main(output_file, scaler):
     estimators = []
     if scaler == 'standardized':
         estimators.append(('standardized', StandardScaler()))
@@ -21,8 +20,7 @@ def main(output_file, scaler='standardized'):
     estimators.append(('logreg', LogisticRegression()))
     model = Pipeline(estimators)
 
-    with open(output_file, 'wb') as fh:
-        pickle.dump(model, fh)
+    joblib.dump(model, output_file)
 
 
 if __name__ == '__main__':

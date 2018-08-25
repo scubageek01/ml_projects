@@ -3,12 +3,12 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.pipeline import Pipeline
 from sklearn.ensemble import RandomForestClassifier
-import pickle
+from sklearn.externals import joblib
 
 
 @click.command()
 @click.argument('output_file', type=click.Path(writable=True, dir_okay=False))
-@click.option('--scaler', default='standardized', help='standard -> StandardScaler, minmax -> MinMaxScaler')
+@click.option('--scaler', default='standardized', help='standardized -> StandardScaler, minmax -> MinMaxScaler')
 def main(output_file, scaler='standardized'):
     estimators = []
     if scaler == 'standardized':
@@ -20,8 +20,7 @@ def main(output_file, scaler='standardized'):
     estimators.append(('random_forest', RandomForestClassifier()))
     model = Pipeline(estimators)
 
-    with open(output_file, 'wb') as fh:
-        pickle.dump(model, fh)
+    joblib.dump(model, output_file)
 
 
 if __name__ == '__main__':

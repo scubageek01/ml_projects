@@ -51,23 +51,31 @@ def get_response(dataframe):
 
 @click.command()
 @click.argument('input_file', type=click.Path(exists=True, readable=True, dir_okay=False))
-@click.argument('output_file', type=click.Path(writable=True, dir_okay=False))
-@click.option('--features')
-@click.option('--response')
-def main(input_file, output_file, features, response):
+@click.argument('output_dataframe', type=click.Path(writable=True, dir_okay=False))
+@click.option('--output_features', help='Pickled output for features matrix')
+@click.option('--output_response', help='Pickled output for response vector')
+def main(input_file, output_dataframe, output_features, output_response):
     """Need to include logging feature.  But for now just print to console"""
     print("Preprocess data")
 
     dataframe = read_raw_data(input_file)
     colnames, feature_cols, response_col, feature_size = get_dataset_attributes()
     dataframe.columns = colnames
-    dataframe.to_pickle(output_file)
 
     features_matrix = get_features(dataframe)
     response_vector = get_response(dataframe)
 
-    features_matrix.to_pickle(features)
-    response_vector.to_pickle(response)
+    # Convert to ndarray
+    dataframe = dataframe.values
+    features_matrix = features_matrix.values
+    response_vector = response_vector.values.ravel()
+
+    # features_matrix.to_pickle(features)
+    # response_vector.to_pickle(response)
+
+    np.save(output_dataframe, dataframe)
+    np.save(output_features, features_matrix)
+    np.save(output_response, response_vector)
 
 
 if __name__ == '__main__':

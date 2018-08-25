@@ -1,5 +1,4 @@
-Accuracy
- - Mean: 0.780  Std:  0.050
+Executed on 2018-08-24 21:49:46.640823
 
 Model parameters 
  {'memory': None, 'steps': [('standardized', StandardScaler(copy=True, with_mean=True, with_std=True)), ('logreg', LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
@@ -9,3 +8,7 @@ Model parameters
           intercept_scaling=1, max_iter=100, multi_class='ovr', n_jobs=1,
           penalty='l2', random_state=None, solver='liblinear', tol=0.0001,
           verbose=0, warm_start=False), 'standardized__copy': True, 'standardized__with_mean': True, 'standardized__with_std': True, 'logreg__C': 1.0, 'logreg__class_weight': None, 'logreg__dual': False, 'logreg__fit_intercept': True, 'logreg__intercept_scaling': 1, 'logreg__max_iter': 100, 'logreg__multi_class': 'ovr', 'logreg__n_jobs': 1, 'logreg__penalty': 'l2', 'logreg__random_state': None, 'logreg__solver': 'liblinear', 'logreg__tol': 0.0001, 'logreg__verbose': 0, 'logreg__warm_start': False}
+
+Neg_Log_Loss
+ - Mean: -0.484  Std:  0.061
+
