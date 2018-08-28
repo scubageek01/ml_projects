@@ -5,7 +5,7 @@ import yaml
 import os
 
 PROJ_ROOT = os.path.abspath(os.path.join(os.pardir))
-PARAMS = 'src/data/params.yml'
+PARAMS = 'data/params.yml'
 
 
 def read_config(filename):
