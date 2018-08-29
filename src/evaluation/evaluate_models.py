@@ -18,13 +18,13 @@ from sklearn.svm import SVC
 PARAMS = 'params.yml'
 
 sys.path.append('src')
-from data.preprocess import read_processed_data, read_config
+from data.preprocess import read_processed_data, read_config, standardize_data, rescale_data
 
 
 def get_estimators():
     estimators = []
     estimators.append(('LR', LogisticRegression()))
-    estimators.append(('LDA', LinearDiscriminantAnalysis()))
+    # estimators.append(('LDA', LinearDiscriminantAnalysis()))
     estimators.append(('KNN', KNeighborsClassifier()))
     estimators.append(('CART', DecisionTreeClassifier()))
     estimators.append(('RFC', RandomForestClassifier()))
@@ -42,7 +42,8 @@ def main(scoring, features, response, output_file):
     estimators = get_estimators()
     results = []
     names = []
-    X = read_processed_data(features)
+    X_unscaled = read_processed_data(features)
+    X = rescale_data(X_unscaled)
     y = read_processed_data(response)
     kfold = KFold(n_splits=10, random_state=7)
 

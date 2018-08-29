@@ -3,6 +3,10 @@ import pandas as pd
 import numpy as np
 import yaml
 import os
+from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import MinMaxScaler
+from sklearn.preprocessing import Normalizer
+from sklearn.preprocessing import Binarizer
 
 PROJ_ROOT = os.path.abspath(os.path.join(os.pardir))
 PARAMS = 'params.yml'
@@ -47,6 +51,30 @@ def get_features(dataframe):
 def get_response(dataframe):
     colnames, feature_cols, response_col, feature_size = get_dataset_attributes()
     return dataframe[response_col]
+
+
+def rescale_data(dataframe):
+    scaler = MinMaxScaler(feature_range=(0, 1))
+    dataframe = scaler.fit_transform(dataframe)
+    return dataframe
+
+
+def standardize_data(dataframe):
+    scaler = StandardScaler()
+    dataframe = scaler.fit_transform(dataframe)
+    return dataframe
+
+
+def normalize_data(dataframe):
+    scaler = Normalizer()
+    dataframe = scaler.fit_transform(dataframe)
+    return dataframe
+
+
+def binarize_data(dataframe):
+    scaler = Binarizer()
+    dataframe = scaler.fit_transform(dataframe)
+    return dataframe
 
 
 @click.command()
