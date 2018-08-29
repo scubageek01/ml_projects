@@ -79,9 +79,9 @@ def binarize_data(dataframe):
 
 @click.command()
 @click.argument('input_file', type=click.Path(exists=True, readable=True, dir_okay=False))
-@click.argument('output_dataframe', type=click.Path(writable=True, dir_okay=False))
-@click.option('--output_features', help='Pickled output for features matrix')
-@click.option('--output_response', help='Pickled output for response vector')
+@click.argument('output_dataframe', default='data/processed/dataframe.npy', type=click.Path(writable=True, dir_okay=False))
+@click.option('--output_features', default='data/processed/features.npy')
+@click.option('--output_response', default='data/processed/response.npy')
 def main(input_file, output_dataframe, output_features, output_response):
     """Need to include logging feature.  But for now just print to console"""
     print("Preprocess data")
@@ -90,16 +90,13 @@ def main(input_file, output_dataframe, output_features, output_response):
     colnames, feature_cols, response_col, feature_size = get_dataset_attributes()
     dataframe.columns = colnames
 
-    features_matrix = get_features(dataframe)
-    response_vector = get_response(dataframe)
+    raw_features_matrix = get_features(dataframe)
+    raw_response_vector = get_response(dataframe)
 
-    # Convert to ndarray
+    # Scaling data (results in ndarray)
+    features_matrix = standardize_data(raw_features_matrix)
+    response_vector = raw_response_vector.values.ravel()
     dataframe = dataframe.values
-    features_matrix = features_matrix.values
-    response_vector = response_vector.values.ravel()
-
-    # features_matrix.to_pickle(features)
-    # response_vector.to_pickle(response)
 
     np.save(output_dataframe, dataframe)
     np.save(output_features, features_matrix)

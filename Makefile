@@ -2,7 +2,7 @@
 
 include .env
 
-all: data/raw/pima.csv data/raw/iris.csv data/processed/data models/linear_discriminant_analysis.model models/logistic_regression.model models/random_forest.model reports/figures/model_comparison_results.txt
+all: data/raw/pima.csv data/raw/iris.csv data/processed/dataframe reports/figures/model_comparison_results.txt tune_knn
 
 clean:
 	rm -rf data/raw/*.csv
@@ -18,20 +18,14 @@ data/raw/iris.csv:
 data/raw/pima.csv:
 	python src/data/download.py ${PIMA_URL} $< $@ 
 
-data/processed/data: data/raw/iris.csv
-	python src/data/preprocess.py $< $@ --output_features data/processed/features --output_response data/processed/response
-
-models/logistic_regression.model:
-	python src/models/logistic_regression.py $< $@ --scaler minmax
-
-models/linear_discriminant_analysis.model:
-	python src/models/lda.py $< $@
-
-models/random_forest.model:
-	python src/models/random_forest.py $< $@
+data/processed/dataframe: data/raw/iris.csv
+	python src/data/preprocess.py $< $@
 
 reports/figures/model_comparison_results.txt:
-	python src/evaluation/evaluate_models.py $< $@
+	python src/evaluation/evaluate.py $< $@
+
+tune_knn:
+	python src/evaluation/tune_knn.py
 
 test: all
 	pytest src
