@@ -1,0 +1,12 @@
+LR: Mean: 0.770 Std: 0.048
+LDA: Mean: 0.773 Std: 0.052
+KNN: Mean: 0.727 Std: 0.062
+CART: Mean: 0.691 Std: 0.069
+NB: Mean: 0.755 Std: 0.043
+SVM: Mean: 0.651 Std: 0.072
+LR: Mean: 0.770 Std: 0.048
+LDA: Mean: 0.773 Std: 0.052
+KNN: Mean: 0.727 Std: 0.062
+CART: Mean: 0.682 Std: 0.067
+NB: Mean: 0.755 Std: 0.043
+SVM: Mean: 0.651 Std: 0.072

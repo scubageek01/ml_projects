@@ -2,7 +2,7 @@
 
 include .env
 
-all: data/raw/pima.csv data/processed/data models/linear_discriminant_analysis.model models/logistic_regression.model models/random_forest.model reports/figures/logistic_regression_results.txt reports/figures/random_forest_results.txt reports/figures/lda_results.txt
+all: data/raw/pima.csv data/raw/iris.csv data/processed/data models/linear_discriminant_analysis.model models/logistic_regression.model models/random_forest.model reports/figures/model_comparison_results.txt
 
 clean:
 	rm -rf data/raw/*.csv
@@ -18,7 +18,7 @@ data/raw/iris.csv:
 data/raw/pima.csv:
 	python src/data/download.py ${PIMA_URL} $< $@ 
 
-data/processed/data: data/raw/pima.csv
+data/processed/data: data/raw/iris.csv
 	python src/data/preprocess.py $< $@ --output_features data/processed/features --output_response data/processed/response
 
 models/logistic_regression.model:
@@ -30,14 +30,8 @@ models/linear_discriminant_analysis.model:
 models/random_forest.model:
 	python src/models/random_forest.py $< $@
 
-reports/figures/random_forest_results.txt:
-	python src/evaluation/evaluate.py $< $@ --model models/random_forest.model --scoring accuracy --features data/processed/features.npy --response data/processed/response.npy
-
-reports/figures/logistic_regression_results.txt:
-	python src/evaluation/evaluate.py $< $@ --model models/logistic_regression.model --scoring accuracy --features data/processed/features.npy --response data/processed/response.npy
-
-reports/figures/lda_results.txt:
-	python src/evaluation/evaluate.py $< $@ --model models/linear_discriminant_analysis.model --scoring accuracy --features data/processed/features.npy --response data/processed/response.npy
+reports/figures/model_comparison_results.txt:
+	python src/evaluation/evaluate_models.py $< $@
 
 test: all
 	pytest src

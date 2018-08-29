@@ -1,0 +1,18 @@
+#feature_cols:
+#  - preg
+#  - plas
+#  - pres
+#  - skin
+#  - test
+#  - mass
+#  - pedi
+#  - age
+#response_col:
+#  - class
+feature_cols:
+  - sepal_length
+  - sepal_width
+  - petal_length
+  - petal_width
+response_col:
+  - class
