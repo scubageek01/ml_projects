@@ -94,7 +94,8 @@ def main(input_file, output_dataframe, output_features, output_response):
     raw_response_vector = get_response(dataframe)
 
     # Scaling data (results in ndarray)
-    features_matrix = standardize_data(raw_features_matrix)
+    # features_matrix = standardize_data(raw_features_matrix)
+    features_matrix = raw_features_matrix
     response_vector = raw_response_vector.values.ravel()
     dataframe = dataframe.values
 

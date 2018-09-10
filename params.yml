@@ -16,3 +16,19 @@ feature_cols:
   - petal_width
 response_col:
   - class
+#feature_cols:
+#  - CRIM
+#  - ZN
+#  - INDUS
+#  - CHAS
+#  - NOX
+#  - RM
+#  - AGE
+#  - DIS
+#  - RAD
+#  - TAX
+#  - PTRATIO
+#  - B
+#  - LSTAT
+#response_col:
+#  - MEDV

@@ -2,7 +2,7 @@
 
 include .env
 
-all: data/raw/pima.csv data/raw/iris.csv data/processed/dataframe reports/figures/model_comparison_results.txt tune_knn
+all: data/raw/pima.csv data/raw/iris.csv data/raw/housing.csv data/processed/dataframe reports/figures/classification_model_comparison_results.txt reports/figures/regression_model_comparison_results.txt
 
 clean:
 	rm -rf data/raw/*.csv
@@ -15,14 +15,20 @@ clean:
 data/raw/iris.csv:
 	python src/data/download.py ${IRIS_URL} $@
 
+data/raw/housing.csv:
+	python src/data/download.py ${HOUSING_URL} $@
+
 data/raw/pima.csv:
 	python src/data/download.py ${PIMA_URL} $< $@ 
 
 data/processed/dataframe: data/raw/iris.csv
 	python src/data/preprocess.py $< $@
 
-reports/figures/model_comparison_results.txt:
-	python src/evaluation/evaluate.py $< $@
+reports/figures/classification_model_comparison_results.txt:
+	python src/evaluation/evaluate_classification.py $< $@
+
+reports/figures/regression_model_comparison_results.txt:
+	python src/evaluation/evaluate_regression.py $< $@
 
 tune_knn:
 	python src/evaluation/tune_knn.py
