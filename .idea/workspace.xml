@@ -2,39 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b5484d06-5413-4a71-902c-0a615592462c" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/evaluation/evaluate_classification.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/pipeline.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/class_project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/class_project.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/class_project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ml_projects.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.pytest_cache/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/.pytest_cache/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.pytest_cache/v/cache/nodeids" beforeDir="false" afterPath="$PROJECT_DIR$/.pytest_cache/v/cache/nodeids" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/environment.yml" beforeDir="false" afterPath="$PROJECT_DIR$/environment.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/.ipynb_checkpoints/00-initial-exploratory-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/.ipynb_checkpoints/00-initial-exploratory-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/.ipynb_checkpoints/Model Evaluation-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/.ipynb_checkpoints/Model Evaluation-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/.ipynb_checkpoints/Untitled-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/.ipynb_checkpoints/Untitled-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/00-initial-exploratory.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/00-initial-exploratory.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/Model Evaluation.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/Model Evaluation.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebooks/Untitled.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebooks/Untitled.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/params.yml" beforeDir="false" afterPath="$PROJECT_DIR$/params.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/download.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/download.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/preprocess.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/preprocess.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/evaluation/evaluate.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/evaluation/evaluate_regression.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/evaluation/predict.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/evaluation/predict.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/evaluation/tune_knn.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/evaluation/tune_knn.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/knn.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/knn.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/lda.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/lda.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/linear_regression.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/linear_regression.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/logistic_regression.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/logistic_regression.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/random_forest.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/random_forest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/test_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/test_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/visualization/densityplot.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/visualization/densityplot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/visualization/pairplot.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/visualization/pairplot.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -192,9 +162,11 @@
     <session id="-1708463371">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="3" />
+          <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.2" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -261,7 +233,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/evaluation/evaluate_classification.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
+            <state relative-caret-position="315">
               <caret line="36" column="43" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
@@ -273,7 +245,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/models/lda.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
+            <state relative-caret-position="600">
               <caret line="48" column="26" selection-start-line="48" selection-start-column="26" selection-end-line="48" selection-end-column="26" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
@@ -285,7 +257,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/models/logistic_regression.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
+            <state relative-caret-position="330">
               <caret line="27" selection-start-line="27" selection-end-line="27" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
@@ -309,7 +281,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/evaluation/evaluate_regression.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="55">
+            <state relative-caret-position="16">
               <caret line="34" column="36" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
@@ -484,7 +456,7 @@
   </component>
   <component name="RunManager" selected="Python.evaluate_models">
     <configuration name="evaluate_models" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="class_project" />
+      <module name="ml_projects" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -505,7 +477,7 @@
       <method v="2" />
     </configuration>
     <configuration name="preprocess" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="class_project" />
+      <module name="ml_projects" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -549,9 +521,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="740" extended-state="6" />
+    <frame x="0" y="23" width="1280" height="740" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2025417" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2025417" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -562,7 +534,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3286517" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3271605" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.3271605" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.3271605" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -647,9 +619,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/reports/figures/tuning_results.txt" />
-    <entry file="file://$PROJECT_DIR$/data/raw/iris.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/data/raw/iris.csv" />
     <entry file="file://$PROJECT_DIR$/src/evaluation/tune_knn.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="166">
@@ -671,9 +641,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/raw/housing.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/data/raw/housing.csv" />
     <entry file="file://$PROJECT_DIR$/reports/figures/model_comparison_results.txt" />
     <entry file="file://$PROJECT_DIR$/src/models/linear_regression.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -687,32 +655,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
           <caret line="41" column="44" selection-start-line="41" selection-start-column="44" selection-end-line="41" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/raw/pima.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/pipeline.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reports/figures/regression_model_comparison_results.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="33" lean-forward="true" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/data/raw/pima.csv" />
+    <entry file="file://$PROJECT_DIR$/reports/figures/regression_model_comparison_results.txt" />
     <entry file="file://$PROJECT_DIR$/environment.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -720,23 +667,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/logistic_regression.py">
+    <entry file="file://$PROJECT_DIR$/reports/figures/classification_model_comparison_results.txt" />
+    <entry file="file://$PROJECT_DIR$/Makefile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/lda.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="48" column="26" selection-start-line="48" selection-start-column="26" selection-end-line="48" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="390">
+          <caret line="26" column="6" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -755,23 +690,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Makefile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="6" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reports/figures/classification_model_comparison_results.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1395">
-          <caret line="93" lean-forward="true" selection-start-line="93" selection-end-line="93" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/evaluation/evaluate_classification.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
+        <state relative-caret-position="315">
           <caret line="36" column="43" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
@@ -779,9 +700,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/lda.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="48" column="26" selection-start-line="48" selection-start-column="26" selection-end-line="48" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/logistic_regression.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/pipeline.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/evaluation/evaluate_regression.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="55">
+        <state relative-caret-position="16">
           <caret line="34" column="36" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />

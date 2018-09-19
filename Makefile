@@ -21,7 +21,7 @@ data/raw/housing.csv:
 data/raw/pima.csv:
 	python src/data/download.py ${PIMA_URL} $< $@ 
 
-data/processed/dataframe: data/raw/iris.csv
+data/processed/dataframe: data/raw/pima.csv
 	python src/data/preprocess.py $< $@
 
 reports/figures/classification_model_comparison_results.txt:
